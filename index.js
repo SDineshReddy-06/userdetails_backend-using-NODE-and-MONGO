@@ -1,11 +1,13 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const app = express();
 dotenv.config();
 
 app.use(express.json())
+app.use(cors())
 
 app.listen(5000,()=>{
     console.log('Server is running on PORT 5000')
